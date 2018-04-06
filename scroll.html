@@ -21,7 +21,7 @@
         
     <div id="container"></div>
 
-    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script>        
         Highcharts.wrap(Highcharts.Pointer.prototype, 'pinch', function (proceed, e) {
             if (e.touches.length === 1 && e.type === 'touchmove') {
@@ -43,7 +43,10 @@
             
             xAxis: {
                 min: 3,
-                max: 6
+                max: 6,
+                scrollbar: {
+                    enabled: true
+                }
             },
 
             series: [{
